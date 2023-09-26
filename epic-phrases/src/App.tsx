@@ -17,11 +17,18 @@ function App() {
     "Made from spiders, by spiders, for spiders.",
     "Despite everything, it's still you.",
     "But nobody came..."]}
-
   ]
-    function catEsc(index: number) {
-      console.log("Clicked tem position:", index)
-    }
+
+  function makethphrase() {
+    const numberth = Math.floor(Math.random() * allphrase[catselected].phras.length)
+    settext(`"${allphrase [catselected].phras[numberth]}"`)
+    //console.log(numberth)
+  }
+
+  function catEsc(index: number) {
+    //console.log("Clicked tem position:", index)
+    setcatselected(index)
+  }
 
   return (
     <>
@@ -40,7 +47,7 @@ function App() {
             </button>
           ))}
           </section>
-        <button className='gen-phrase'>Generate da phrase</button>
+        <button className='gen-phrase' onClick={() => makethphrase}>Generate da phrase</button>
 
         {text !== '' && <p className='phrase'>{text}</p>}
       </div>
