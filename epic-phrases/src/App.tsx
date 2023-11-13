@@ -47,7 +47,7 @@ function App() {
             </button>
           ))}
           </section>
-        <button className='gen-phrase' onClick={() => makethphrase}>Generate da phrase</button>
+        <button className='gen-phrase' onClick={makethphrase}>Generate da phrase</button>
 
         {text !== '' && <p className='phrase'>{text}</p>}
       </div>
